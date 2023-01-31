@@ -1,18 +1,13 @@
 import React from "react";
-import Links from "./Links"
 
-function About(props) {
-
-  let hasBio = props.bio ? props.bio : '';
-  
+function Links({github, linkedin}) {
   return (
-    <div id="about">
-      <h2>About Me</h2>
-      {hasBio ? <p>{props.bio}</p> : ''}
-      <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      <Links github={props.github} linkedin={props.linkedin}/>
-    </div>
-  );
+    <>
+      <h3>Links</h3>
+      <a href={github}>{github}</a>
+      <a href={linkedin}>{linkedin}</a>
+    </>
+  )
 }
 
-export default About;
+export default Links
